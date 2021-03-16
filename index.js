@@ -76,9 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(a,b){
     /*add your code here*/
-  }
+  return a*b;
+}
+
+console.log(multiply(3,4));
 
 
 
@@ -92,9 +95,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
+function dogYears(dogAge){
+  return dogAge*7;
     /*add your code here*/
 }
+
+dogYears(Math.round(Math.random()*16));
 
 
 
@@ -125,9 +131,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+  let percent = 0;
+  if(age>=1){
+    if(weight<6){
+      percent = 0.05;
+    }else if(weight>=6&&weight<11){
+      percent = 0.04;
+    }else if(weight>=11&&weight<16){
+      percent = 0.03;
+    }else {
+      percent = 0.02;
+    }
   }
+  else{
+    if(age<=4/12){
+      percent = 0.1;
+    }else if(age<=7/12){
+      percent = 0.05;
+    }else{
+      percent = 0.04;
+    }
+  }
+  return weight*percent;
+
+    /*add your code here*/
+}
+hungryDog(15,1);
 
 
 
