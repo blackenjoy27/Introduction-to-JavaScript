@@ -298,7 +298,17 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
+function vowelCounter(words) {
+  const vowels = ['a','e','i','o','u'];
+  words = words.toLowerCase();
+  let counter = 0;
+  for(let i = 0; i<words.length;i++){
+    const char =words.chatAt(i);
+    if(vowels.includes(char)){
+      counter++;
+    }
+  }
+  return counter;
     /*add your code here*/
 }
 
