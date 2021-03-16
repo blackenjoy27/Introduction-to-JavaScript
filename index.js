@@ -18,6 +18,15 @@ Do the following:
    HINT: no function required
 */
 
+{
+  const votingAge = Math.round(Math.random()*100);
+  if(votingAge >= 18){
+    console.log(true);
+  }else{
+    console.log(false);
+  }
+}
+
 
 
 /*
@@ -30,10 +39,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
-
-
+{
+  let a = 3;
+  let b = 5;
+  a = b;
+  console.log(a);
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,6 +56,13 @@ Do the following:
 
    HINT: look up the Number method
 */
+
+{
+  let num = "1999";
+  num = Number(num);
+  console.log(num);
+}
+
 
 
 
