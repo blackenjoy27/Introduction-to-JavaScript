@@ -181,8 +181,27 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let pcMove = Math.random();
+if(pcMove<=0.33){
+  pcMove = 'rock';
+}else if(pcMove<=0.66){
+  pcMove = 'scissors';
+}else{
+  pcMove = "paper";
+}
 
 function game(user, computer){
+  if(user!==computer){
+    if(user === 'rock'&&computer==='paper'){
+      return "you lose!";
+    }else if(user === 'scissors' && computer ==='rock'){
+      return "you lose!";
+    }else if(user === 'paper' && computer ==='scissors'){
+      return "you lose!";
+    }
+    return "you win!";
+  }
+  return "it's a tie";
     /*add your code here*/
 }
   
